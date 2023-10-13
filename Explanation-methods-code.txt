@@ -19,6 +19,7 @@ with the HTTP protocol.
 
 
 We start with creating an EC2 instance (ubuntu OS)
+I have used Ubuntu as per my convenience, start by : 
 
 
 1. Install Apache server on Ubuntu

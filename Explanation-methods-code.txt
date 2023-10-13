@@ -1,7 +1,7 @@
 ﻿There is this automated way of hosting an AWS WordPress Website using AWS Lightsail.
 Here’s the link to the document (https://lightsail.aws.amazon.com/ls/docs/en_us/articles/amazon-lightsail-tutorial-launching-and-configuring-wordpress) 
 But we will use the manual method i.e. using EC2 instance.
-Here’s the link to document for manual method (Linux OS based) :(https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/hosting-wordpress.html)
+Here’s the link to document for the manual method (Linux OS-based) :(https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/hosting-wordpress.html)
 
 
 We start with renting a virtual computer on the AWS platform and on this virtual computer we're going to install software known as Apache as a web server, 
@@ -38,11 +38,11 @@ sudo mysql -u root
 
 
 5. Change authentication plugin to mysql_native_password (change the password to something strong)
-ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password by 'Testpassword@123';
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password by 'YourPassword';
 
 
 6. Create a new database user for wordpress (change the password to something strong)
-CREATE USER 'wp_user'@localhost IDENTIFIED BY 'Testpassword@123';
+CREATE USER 'wp_user'@localhost IDENTIFIED BY 'YourPassword';
 
 
 7. Create a database for wordpress

@@ -1,4 +1,17 @@
-All the commands that are executed in the above youtube video are mentioned in this gist. 
+We start with renting a virtual computer on the AWS platform and on this virtual computer we're going to install software known as Apache as a web server, 
+a web server is basically software that handles HTTP requests and serves the appropriate HTTP responses so when you're trying to access a website from your 
+browser your browser actually sends an HTTP request to the server of that website and on the server, there is a web server software running that will take your
+HTTP request will process it and it will respond back with an appropriate response. we're going to use a web server named Apache so we're going to first
+create a virtual computer and then we're going to install Apache obviously, we'll also need a database so we'll also install a DBMSon our virtual computer
+and this is going to be MySQL which is a very popular relational database management system once we're done with it we're going to install WordPress now
+WordPress is a very popular content management system that is written in php nothing but software really that is written in PHP and you can basically install
+it on your web server and you can create a website from this installation and you can customize your website for the most part, you don't need to write any code 
+to create a website with WordPress but if you want to bring more functionality to your website you can write code that's about it and once we have installed
+WordPress the next thing  we're going to do is we're going to assign a domain name to our website so that whenever a user goes to your domain name they will
+be taken to the website that you are creating and deploying on AWS finally, we are also going to give it an SSL certificate so that our website will be secure 
+with the HTTP protocol.
+
+We start with creating an EC2 instance (ubuntu OS)
 
 1. Install Apache server on Ubuntu
 sudo apt install apache2
@@ -24,6 +37,8 @@ CREATE DATABASE wp;
 8. Grant all privilges on the database 'wp' to the newly created user
 GRANT ALL PRIVILEGES ON wp.* TO 'wp_user'@localhost;
 
+Use the download link directly from the official WordPress website (https://wordpress.org/download/releases/), use the .tar version for download.
+
 9. Download wordpress
 cd /tmp
 wget https://wordpress.org/latest.tar.gz
@@ -45,3 +60,5 @@ sudo apt install certbot python3-certbot-apache
 
 14. Request and install ssl on your site with certbot
 sudo certbot --apache
+
+That's it our AWS-hosted WordPress website is up and running securely.

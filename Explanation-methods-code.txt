@@ -17,6 +17,10 @@ WordPress the next thing  we're going to do is we're going to assign a domain na
 be taken to the website that you are creating and deploying on AWS finally, we are also going to give it an SSL certificate so that our website will be secure 
 with the HTTP protocol.
 
+Services Used:
+AMAZON EC2
+Lambda
+Route53/Any Domain provider.
 
 We start with creating an EC2 instance (ubuntu OS)
 I have used Ubuntu at my convenience, start by : 
